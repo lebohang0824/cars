@@ -12,10 +12,12 @@ $('#btnStopStart').click(() => {
 
 	walkway.css(state, (n, res) => {
 		if (res == 'paused') {
+			$('#pop').css('display', 'none');
 			btn.text('Stop');
 			return 'running';
 		}
 
+		$('#pop').css('display', 'block');
 		btn.text('Start');
 		return 'paused';
 	});
